@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import { ipcRenderer } from 'electron';
 
 @Component({
   selector: 'App',
   template:
   `<div>
-    <h2>Welcome to {{name}} Angular2!</h2>    
+    <h2>Welcome to {{name}} Angular2!</h2>
   </div>`
 })
 export class AppComponent implements OnInit {
@@ -14,6 +15,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('component initialized');
+    ipcRenderer.on('blarg', (event, args) => {
+      console.log(event, args);
+    });
   }
 }
 

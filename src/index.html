@@ -61,8 +61,11 @@
   </body>
   <script src="../node_modules/zone.js/dist/zone.js"></script>
   <script src="../node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="../node_modules/arrive/minified/arrive.min.js"></script>    
-  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/arrive/minified/arrive.min.js"></script>
+   <!-- the following jquery hack is a workaround for electron integration  -->
+  <script>
+    window.jQuery = window.$ = require('jquery');
+  </script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
   <script src="../node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
