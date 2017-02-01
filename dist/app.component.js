@@ -15,8 +15,7 @@ AppComponent = tslib_1.__decorate([
     core_2.Component({
         selector: 'App',
         template: `<div>
-    <h2>Welcome to {{name}} Angular2!</h2>
-    <i class="material-icons">face</i>
+    <h2>Welcome to {{name}} Angular2!</h2>    
   </div>`
     }),
     tslib_1.__metadata("design:paramtypes", [])
